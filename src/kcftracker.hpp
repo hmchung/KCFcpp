@@ -100,16 +100,16 @@ public:
     // Update position based on the new frame
     virtual cv::Rect update(cv::Mat image);
 
-    float interp_factor; // linear interpolation factor for adaptation
-    float sigma; // gaussian kernel bandwidth
-    float lambda; // regularization
-    int cell_size; // HOG cell size
-    int cell_sizeQ; // cell size^2, to avoid repeated operations
-    float padding; // extra area surrounding the target
-    float output_sigma_factor; // bandwidth of gaussian target
-    int template_size; // template size
-    float scale_step; // scale step for multi-scale estimation
-    float scale_weight;  // to downweight detection scores of other scales for added stability
+    float   interp_factor;  // linear interpolation factor for adaptation
+    float   sigma;          // gaussian kernel bandwidth
+    float   lambda;         // regularization
+    int     cell_size;      // HOG cell size
+    int     cell_sizeQ;     // cell size^2, to avoid repeated operations
+    float   padding;        // extra area surrounding the target
+    float   output_sigma_factor; // bandwidth of gaussian target
+    int     template_size;  // template size
+    float   scale_step;     // scale step for multi-scale estimation
+    float   scale_weight;   // to downweight detection scores of other scales for added stability
 
 protected:
     // Detect object in the current frame.
